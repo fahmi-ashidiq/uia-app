@@ -1,7 +1,6 @@
-# P122 — PHP + MySQL (Setup)
+— PHP + MySQL (Setup)
 
-Proyek ini sudah diubah dari penyimpanan `data.json` menjadi **MySQL**, dan sudah
-mencakup ke-4 soal:
+Proyek ini sudah diubah dari penyimpanan `data.json` menjadi **MySQL**:
 
 1. Foto profil (kanan atas) + logo UIA (kiri atas) — di `index.php`
 2. Tabel `tb_region` (code, name, level, parent_code, parent_name) — `database/schema.sql` + `database/region.sql`
