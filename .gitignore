@@ -1,0 +1,5 @@
+/vendor/
+config/mailer.php
+asset/profile/*.jpg
+asset/profile/*.jpeg
+asset/profile/*.png
