@@ -1,7 +1,5 @@
 — PHP + MySQL (Setup)
 
-Proyek ini sudah diubah dari penyimpanan `data.json` menjadi **MySQL**:
-
 1. Foto profil (kanan atas) + logo UIA (kiri atas) — di `index.php`
 2. Tabel `tb_region` (code, name, level, parent_code, parent_name) — `database/schema.sql` + `database/region.sql`
 3. Dropdown wilayah bertingkat (Provinsi → Kab/Kota → Kecamatan → Kelurahan/Desa) di halaman Profile, tersimpan di `tb_users`
@@ -13,16 +11,14 @@ Jalankan berurutan di MySQL (phpMyAdmin / CLI):
 
 ```bash
 mysql -u root -p < database/schema.sql   # buat database `master` + tabel tb_users, tb_region, tb_team
-mysql -u root -p master < database/region.sql   # isi data wilayah (91k+ baris, agak lama)
+mysql -u root -p master < database/region.sql   # isi data wilayah
 ```
 
 `schema.sql` juga memasukkan 2 akun contoh dari `data.json` lama (password: `12345`,
-sudah di-hash bcrypt) dan 3 baris contoh `tb_team` yang **wajib kamu ganti** dengan
-data anggota tim kamu yang sebenarnya (NIM, Nama, Kontribusi).
-
+sudah di-hash bcrypt)
 ## 2. Konfigurasi koneksi
 
-Edit `config/database.php` sesuai kredensial MySQL lokal kamu (host/user/password).
+Edit `config/database.php` sesuai kredensial MySQL lokal (host/user/password).
 
 ## 3. Install dependency (ramsey/uuid)
 
@@ -32,7 +28,7 @@ composer install
 
 ## 4. Logo UIA
 
-Simpan file logo UIA kamu sendiri di `asset/img/logo-uia.png` (ukuran persegi,
+file logo UIA di `asset/img/logo-uia.png` (ukuran persegi,
 mis. 128x128). Sidebar sudah otomatis menampilkannya; jika file belum ada,
 teks "UIA" tetap tampil tanpa gambar rusak.
 
